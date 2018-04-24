@@ -1,5 +1,3 @@
-'use strict';
-
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
@@ -9,6 +7,7 @@ class App extends Component {
     return (
       <div className="App" >
         <Header />
+
         <h1>Welcome To React</h1>
       </div>
     );
