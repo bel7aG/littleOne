@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "./Header.css";
-import SideBar from '../sideBar/index';
+import SideBar from '../sideBar';
 
 const Header = () => (
   <div>
