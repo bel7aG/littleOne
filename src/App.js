@@ -7,11 +7,9 @@ import Header from './components/Header/index';
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="App" >
         <Header />
         <h1>Welcome To React</h1>
-        <h2>Wassup React im comming to talk with for some change</h2>
-        <h1>okok</h1>
       </div>
     );
   }
