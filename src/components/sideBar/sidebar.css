@@ -1,0 +1,12 @@
+ul {
+  list-style-type: none;
+  background-color: #21068e; }
+  ul li {
+    color: purple;
+    font-weight: 700;
+    font-size: 2rem;
+    text-decoration: line-through;
+    transition: all 160ms; }
+    ul li:hover {
+      color: white;
+      text-decoration: none; }
