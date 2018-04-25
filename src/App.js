@@ -5,15 +5,17 @@ import Header from './components/Header';
 import Action from './components/Action';
 import Options from './components/Options';
 import AddOption from './components/AddOption';
+import OptionModal from './components/OptionModal';
 
 class IndecisionApp extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      options: ['React', 'Redux', 'EcmaScriptJS']
+      options: ['React', 'Redux', 'EcmaScriptJS'],
+      selectedOption: undefined
     };
     this.handleRemoveAll = this.handleRemoveAll.bind(this);
-    this.handleChance = this.handleChance.bind(this);
+    this.handlePick = this.handlePick.bind(this);
     this.handleAddOption = this.handleAddOption.bind(this);
   }
 
@@ -43,7 +45,7 @@ class IndecisionApp extends Component {
         <Header title={title} subtitle={subtitle}/>
         <Action
           checkOptionsLength={this.state.options.length > 0}
-          handleChance={this.handleChance}
+          handlePick={this.handlePick}
         />
         <Options
           options={this.state.options}
@@ -53,6 +55,10 @@ class IndecisionApp extends Component {
         <AddOption
           handleAddOption={this.handleAddOption}
         />
+        <OptionModal
+          selectedOption={this.state.selectedOption}
+          handleCloseOption={this.handleCloseOption}
+        />
       </div>
     );
   }
@@ -61,9 +67,15 @@ class IndecisionApp extends Component {
     this.setState(() => ({options: []}));
   }
 
-  handleChance() {
+  handlePick() {
     const randomNum = Math.floor(Math.random() * this.state.options.length);
-    alert(this.state.options[randomNum]);
+    const option = this.state.options[randomNum];
+    console.log(option);
+    this.setState(() =>
+      ({
+        selectedOption: option
+      })
+    );
   }
 
   handleAddOption(myValue) {
@@ -83,6 +95,10 @@ class IndecisionApp extends Component {
     this.setState(prevState => ({
       options: prevState.options.filter(element => element !== option)
     }));
+  }
+
+  handleCloseOption = () => {
+    this.setState(() => ({selectedOption: undefined}))
   }
 }
 

@@ -4,7 +4,7 @@ const Action = (props) => (
   <div>
     <button
       disabled={!props.checkOptionsLength}
-      onClick={props.handleChance}
+      onClick={props.handlePick}
     >
       your chance with!
     </button>
