@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import "./Header.css";
-import SideBar from '../sideBar';
 
-const Header = () => (
+const Header = (props) => (
   <div>
-    <SideBar />
-    <h1>Welcome To React World from the big Door</h1>
+    <h1>{props.title}</h1>
+    <h4>{props.subtitle}</h4>
   </div>
 );
 
