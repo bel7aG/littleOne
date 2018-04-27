@@ -10,7 +10,7 @@ class AddOption extends React.Component {
       <div className="blocks">
         <form name="addoption" onSubmit={this.handleAddOption}>
           {this.state.error && <p className="errors">{this.state.error}</p>}
-          <input type="text" id="me" name="addoption" />
+          <input type="text" placeholder="Add Option" id="me" name="addoption" />
           <button className="btn-active">
             Add Option
           </button>

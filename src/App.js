@@ -38,7 +38,7 @@ class IndecisionApp extends Component {
   }
 
   render() {
-    const title = `IEEE iset Rades`,
+    const title = `bel7aG Application`,
     subtitle = `SUUUUUUUUUUUP`;
     return (
       <div className="container">
