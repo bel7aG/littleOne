@@ -38,29 +38,31 @@ class IndecisionApp extends Component {
   }
 
   render() {
-    const title = `My Application`,
-    subtitle = `using ReactJs the first and the best Library EVER`;
+    const title = `IEEE iset Rades`,
+    subtitle = `SUUUUUUUUUUUP`;
     return (
-      <div>
+      <div className="container">
         <Header title={title} subtitle={subtitle}/>
-        <Action
-          checkOptionsLength={this.state.options.length > 0}
-          handlePick={this.handlePick}
-        />
-        <Options
-          options={this.state.options}
-          handleRemoveAll={this.handleRemoveAll}
-          handleDeleteOption={this.handleDeleteOption}
-        />
-        <AddOption
-          handleAddOption={this.handleAddOption}
-        />
-        <OptionModal
-          selectedOption={this.state.selectedOption}
-          handleCloseOption={this.handleCloseOption}
-        />
+        <div className="container-content">
+          <Action
+            checkOptionsLength={this.state.options.length > 0}
+            handlePick={this.handlePick}
+          />
+          <Options
+            options={this.state.options}
+            handleRemoveAll={this.handleRemoveAll}
+            handleDeleteOption={this.handleDeleteOption}
+          />
+          <AddOption
+            handleAddOption={this.handleAddOption}
+          />
+          <OptionModal
+            selectedOption={this.state.selectedOption}
+            handleCloseOption={this.handleCloseOption}
+          />
+        </div>
       </div>
-    );
+        );
   }
 
   handleRemoveAll() {

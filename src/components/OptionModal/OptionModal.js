@@ -5,6 +5,7 @@ const OptionModal = (props) => (
     isOpen={!!props.selectedOption}
     onRequestClose={props.handleCloseOption}
     contentLabel="SelectedOption"
+    className="blocks"
   >
     <h3>React Pick for You this one</h3>
     {props.selectedOption && <p>{props.selectedOption}</p>}

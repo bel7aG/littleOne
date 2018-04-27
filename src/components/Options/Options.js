@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import Option from './../Option';
 
 const Options = (props) => (
-  <div>
-    <button onClick={props.handleRemoveAll}>RemoveAll</button>
+  <div className="blocks options">
+    <button className="btn-danger" onClick={props.handleRemoveAll}>RemoveAll</button>
     {props.options.length > 0 && (
-      <ol>
+      <ol className="options-list">
         {props.options.map((element) =>
           <Option
             key={Math.random() * Math.random()}
